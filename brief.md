@@ -37,4 +37,9 @@ Resource: CISA — 2025 Minimum Elements for a Software Bill of Materials (SBOM)
 
 ## Misconception in My Track
 
+A common misconception is that Log4Shell only put internet-facing servers at risk. In fact, internal applications could also be vulnerable if they used an affected Log4j version in an exploitable configuration and attacker-controlled data reached the logging function. Exposure depends on the version, configuration, and data flow, not simply whether a server is public.  The NIST National Vulnerability Database (NVD) explains that an attacker who controls log messages or parameters can execute arbitrary code in vulnerable configurations. Its “Description” section supports this correction. Exact supporting sentence: “An attacker who can control log messages or log message parameters can execute arbitrary code loaded from LDAP servers when message lookup substitution is enabled.”
+Resource: NVD — CVE-2021-44228 - https://nvd.nist.gov/vuln/detail/CVE-2021-44228
+
 ## Open Question
+
+How can an organization continuously find vulnerable Log4j copies in container images, transitive dependencies, and vendor products, then verify that every production instance has been patched?
