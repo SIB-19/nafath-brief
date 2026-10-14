@@ -22,9 +22,18 @@ Resource: OWASP Mobile Application Security Verification Standard (MASVS) - http
 
 ## Networking
 
+BGP helps networks exchange information about which autonomous systems can reach particular IP prefixes. In a route hijack, a network may announce an unauthorized route and attract traffic, potentially causing interception or disruption. Resource Public Key Infrastructure (RPKI) supports Route Origin Validation by checking route announcements against cryptographically signed Route Origin Authorizations. This can reject invalid origin announcements, but it does not validate every part of a route path or prevent all route leaks, compromised routers, or attacks on endpoints.
+Resource: RFC 6811 — BGP Prefix Origin Validation - https://www.rfc-editor.org/rfc/rfc6811
+
 ## Cybersecurity
 
+Log4Shell (CVE-2021-44228) was a critical remote-code-execution vulnerability affecting Apache Log4j 2, a widely used Java logging library. In vulnerable configurations, attacker-controlled text processed by the logger could trigger lookups that led to code execution. Its impact was amplified by Log4j’s widespread use and the potential compromise of confidentiality, integrity, and availability. The main remediation is to upgrade affected applications to an Apache-recommended fixed version and check for vulnerable copies bundled in dependencies, containers, and vendor software.
+Resource: NVD — CVE-2021-44228 - https://nvd.nist.gov/vuln/detail/CVE-2021-44228
+
 ## Data
+
+A Software Bill of Materials (SBOM) is an inventory of software components and their relationships for a particular product or release. It helps teams identify whether a component is affected when a vulnerability is disclosed and supports supply-chain risk management. Useful fields include the supplier, component name, version, unique identifiers where available, dependency relationships, SBOM author, and creation information. An SBOM is only useful when it is accurate, updated, and tied to the specific software version being assessed.
+Resource: CISA — 2025 Minimum Elements for a Software Bill of Materials (SBOM) - https://www.cisa.gov/resources-tools/resources/2025-minimum-elements-software-bill-materials-sbom
 
 ## Misconception in My Track
 
