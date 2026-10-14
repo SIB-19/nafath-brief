@@ -43,3 +43,38 @@ Resource: NVD — CVE-2021-44228 - https://nvd.nist.gov/vuln/detail/CVE-2021-442
 ## Open Question
 
 How can an organization continuously find vulnerable Log4j copies in container images, transitive dependencies, and vendor products, then verify that every production instance has been patched?
+Resource: The Twelve-Factor App — III. Config - https://12factor.net/config
+
+## AI
+
+Adversarial machine-learning attacks can target different stages and goals. Evasion attacks alter inputs at inference time to cause incorrect predictions, while poisoning attacks compromise training data or the training process so the model learns harmful behavior. Privacy attacks attempt to reveal sensitive information about training data or model behavior. These categories require different mitigations, including robust evaluation, data provenance checks, access controls, and privacy testing; no single defense addresses every attack type.
+Resource: NIST AI 100-2 E2025: Adversarial Machine Learning - https://csrc.nist.gov/pubs/ai/100/2/e2025/final
+
+## Mobile
+
+The OWASP Mobile Application Security Verification Standard (MASVS) is a framework of security requirements for mobile applications. It covers areas such as secure storage, cryptography, authentication, network communication, platform interaction, code quality, resilience, and privacy. A team can use the relevant controls to define security requirements, assess an app, and record evidence for each test. The Mobile Application Security Testing Guide (MASTG) can help testers perform technical checks. A checklist alone does not prove an app is secure.
+Resource: OWASP Mobile Application Security Verification Standard (MASVS) - https://mas.owasp.org/MASVS/
+
+## Networking
+
+BGP helps networks exchange information about which autonomous systems can reach particular IP prefixes. In a route hijack, a network may announce an unauthorized route and attract traffic, potentially causing interception or disruption. Resource Public Key Infrastructure (RPKI) supports Route Origin Validation by checking route announcements against cryptographically signed Route Origin Authorizations. This can reject invalid origin announcements, but it does not validate every part of a route path or prevent all route leaks, compromised routers, or attacks on endpoints.
+Resource: RFC 6811 — BGP Prefix Origin Validation - https://www.rfc-editor.org/rfc/rfc6811
+
+## Cybersecurity
+
+Log4Shell (CVE-2021-44228) was a critical remote-code-execution vulnerability affecting Apache Log4j 2, a widely used Java logging library. In vulnerable configurations, attacker-controlled text processed by the logger could trigger lookups that led to code execution. Its impact was amplified by Log4j’s widespread use and the potential compromise of confidentiality, integrity, and availability. The main remediation is to upgrade affected applications to an Apache-recommended fixed version and check for vulnerable copies bundled in dependencies, containers, and vendor software.
+Resource: NVD — CVE-2021-44228 - https://nvd.nist.gov/vuln/detail/CVE-2021-44228
+
+## Data
+
+A Software Bill of Materials (SBOM) is an inventory of software components and their relationships for a particular product or release. It helps teams identify whether a component is affected when a vulnerability is disclosed and supports supply-chain risk management. Useful fields include the supplier, component name, version, unique identifiers where available, dependency relationships, SBOM author, and creation information. An SBOM is only useful when it is accurate, updated, and tied to the specific software version being assessed.
+Resource: CISA — 2025 Minimum Elements for a Software Bill of Materials (SBOM) - https://www.cisa.gov/resources-tools/resources/2025-minimum-elements-software-bill-materials-sbom
+
+## Misconception in My Track
+
+A common misconception is that Log4Shell only put internet-facing servers at risk. In fact, internal applications could also be vulnerable if they used an affected Log4j version in an exploitable configuration and attacker-controlled data reached the logging function. Exposure depends on the version, configuration, and data flow, not simply whether a server is public.  The NIST National Vulnerability Database (NVD) explains that an attacker who controls log messages or parameters can execute arbitrary code in vulnerable configurations. Its “Description” section supports this correction. Exact supporting sentence: “An attacker who can control log messages or log message parameters can execute arbitrary code loaded from LDAP servers when message lookup substitution is enabled.”
+Resource: NVD — CVE-2021-44228 - https://nvd.nist.gov/vuln/detail/CVE-2021-44228
+
+## Open Question
+
+How can an organization continuously find vulnerable Log4j copies in container images, transitive dependencies, and vendor products, then verify that every production instance has been patched?
